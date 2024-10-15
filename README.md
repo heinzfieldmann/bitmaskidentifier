@@ -1,4 +1,4 @@
-# Identify configuration of tetrominos
+# Identify tetrominos
 Just a quick think about perceptrons
 
 Train a network to regocnize tetris-shapes from scratch.
