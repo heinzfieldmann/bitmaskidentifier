@@ -24,7 +24,10 @@ The 5 tetromino shapes
 
 <img width="514" alt="image" src="https://github.com/user-attachments/assets/24e8066a-f39e-4866-80a7-c1c8dcc908f9">
 
-Others:
-Cosine similarity loss function 
+Other notes. Thinking aloud.
+Cosine similarity loss function. Nope. 
+categorical cross-entropy is better for this kind of classification.
+
+ 
 
     
