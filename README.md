@@ -13,8 +13,6 @@ Todo:
 Identify the network model.
 Do some test of activiation functions.
 
-
-
 The 5 tetromino shapes
 
 **Straight:** vertical and horizontal reflection symmetry, and two-fold rotational symmetry
@@ -26,11 +24,7 @@ The 5 tetromino shapes
 
 <img width="514" alt="image" src="https://github.com/user-attachments/assets/24e8066a-f39e-4866-80a7-c1c8dcc908f9">
 
-Activation function:
-
-I have looked into min
-
 Others:
-Cosine 
+Cosine similarity loss function 
 
     
