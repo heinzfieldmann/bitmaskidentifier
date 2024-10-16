@@ -9,7 +9,6 @@ import numpy as np
 
 # I could create a random shape and see what the highest probability is for that shape since it has to "choose" one right?
 
-
 # Define some shapes champ! Paint them in a 4x4 grid and make it into list.
 
 # Empty (no shape)
@@ -225,9 +224,9 @@ for shape in tetris_shapes:
     shape_labels = ["I", "O", "T", "L", "J", "S", "Z"]
     print(f"Predicted Shape: {predicted_shape}")
     print(f"Probabilities: {probabilities}")
-    for label in shape_labels:
-        print(label)
-        print(probabilities[0])
+#    for label in shape_labels:
+#        print(label)
+#        print(probabilities[0])
 
 print("random shape")
 random_shape = np.random.choice([0, 1], size=16)
