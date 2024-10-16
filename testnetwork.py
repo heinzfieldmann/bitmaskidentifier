@@ -4,6 +4,12 @@ import numpy as np
 
 # My trying to understand the magic of neural networks. Hans
 
+# Prova nu att rotera eller gör om formen till en matris istället för 16 1-dimensionell. Enklare att rotera en matris
+# Skapa en testkörning som visar hur mycket rätt nätverket har.
+
+# I could create a random shape and see what the highest probability is for that shape since it has to "choose" one right?
+
+
 # Define some shapes champ! Paint them in a 4x4 grid and make it into list.
 
 # Empty (no shape)
@@ -36,7 +42,7 @@ import numpy as np
 # [1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0]
 
 # J-shape
-#0110
+#0100
 #0100
 #1100
 #0000
@@ -56,7 +62,7 @@ import numpy as np
 #0000
 # [0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0]
 
-# Z-shape
+# Z-shape (reflection of s)
 #1100
 #0110
 #0000
@@ -207,17 +213,25 @@ def predict_shape(shape):
     
     return shape_labels[predicted_class], output
 
-
-# Hm. sätt ihop labels så vi vet vilken index vi använder? Samt skriva ut prob för varje label
+# shape_labels should be global or in a data set.
+# Hm. sätt ihop labels så vi vet vilken index vi använder? Samt skriva ut prob för varje label.
+# Convert this could be a function mate..... 
 for shape in tetris_shapes:
     print()
     print("Next try: this shape below:")
     print_shape(shape)
     print("Can you predict this shape Mr. computer?")
     predicted_shape, probabilities = predict_shape(shape)
+    shape_labels = ["I", "O", "T", "L", "J", "S", "Z"]
     print(f"Predicted Shape: {predicted_shape}")
     print(f"Probabilities: {probabilities}")
-# Prova nu att rotera eller gör om formen till en matris istället för 16 1-dimensionell. Enklare att rotera en matris
-# Skapa en testkörning som visar hur mycket rätt nätverket har.
+    for label in shape_labels:
+        print(label)
+        print(probabilities[0])
 
-
+print("random shape")
+random_shape = np.random.choice([0, 1], size=16)
+print_shape(random_shape)
+predicted_shape, probabilities = predict_shape(random_shape)
+print(f"Predicted Shape: {predicted_shape}")
+print(f"Probabilities: {probabilities}")
