@@ -1,4 +1,7 @@
 # Identify tetrominos
+
+A simple implementation of a forward propopagation network without any external libraries.
+
 Just a quick think about perceptrons
 
 Train a network to regocnize tetris-shapes from scratch.
